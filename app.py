@@ -1,6 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
+import os
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))  # 如果没有环境变量 PORT，默认使用 5000 端口
+    app.run(host='0.0.0.0', port=port)
+
 
 # 初始化 Flask 应用
 app = Flask(__name__)
