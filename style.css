@@ -1,0 +1,1155 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    /* 背景 */
+    color: #000;
+    /* 默认文字颜色 */
+}
+
+/* Header Styles */
+header {
+    background-color: #f6f6f6;
+    /* 颜色 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 4px solid #000;
+    height: 120px;
+    /* 固定导航栏高度 */
+    padding: 0 30px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    /* 增大 logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-left: 40px;
+    /* 导航栏偏左 */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    /* 增大字体 */
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #00AEEF;
+    /* 鼠标悬停变蓝色 */
+}
+
+.auth-buttons {
+    position: absolute;
+    /* 设置为绝对定位 */
+    top: 50px;
+    /* 距顶部 20px */
+    right: 130px;
+    /* 距右侧 20px */
+    display: flex;
+    gap: 30px;
+    /* 按钮之间的间距 */
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: #3B4C5E;
+}
+
+.signup-btn {
+    background-color: #00AEEF;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Content Styles */
+body.home main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 垂直居中 */
+    height: calc(100vh - 100px);
+    /* 减去导航栏的高度 */
+    padding-top: 200px;
+    /* 确保内容向下偏移 */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+/* Slogan Text Gradient Animation */
+main h1 {
+    font-family: 'verdana';
+    font-size: 100px;
+    /* 字体大小 */
+    font-weight: bold;
+    /* 加粗文字 */
+    line-height: 1.2;
+    /* 行高 */
+    display: inline-block;
+    /* 让文字块宽度自适应内容 */
+    text-align: left;
+    /* 文字左对齐 */
+    margin: 0 auto;
+    /* 整个文字块居中 */
+    margin-top: 230px;
+    /* 让 Slogan 向下偏移 */
+
+
+    color: transparent;
+    /* 起始时文字透明 */
+    background-image: linear-gradient(90deg, black 0%, black 50%, transparent 100%);
+    background-clip: text;
+    /* 背景文字裁剪 */
+    -webkit-background-clip: text;
+    /* Webkit 浏览器兼容 */
+    background-size: 200%;
+    /* 扩大背景尺寸，用于动画 */
+    animation: textReveal 5s ease forwards;
+    /* 动画设置 */
+}
+
+/* 动画关键帧 */
+@keyframes textReveal {
+    0% {
+        background-position: 200% 0;
+        /* 渐变从右边开始 */
+    }
+
+    100% {
+        background-position: 0 0;
+        /* 渐变完全覆盖文字 */
+    }
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    /* 使用 Flex 布局 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: flex-start;
+    /* 顶部对齐 */
+    gap: 120px;
+    /* 内容之间的间距 */
+    margin-top: 120px;
+    /* 距离 Slogan 的间距 */
+}
+
+.value-proposition {
+    max-width: 500px;
+    /* 限制文字块宽度 */
+    margin: 60px 0 0 -5%;
+    /* 距 Slogan 顶部 60px，左侧偏移 % */
+    color: #000;
+    /* 黑色文字 */
+    font-family: 'Georgia', serif;
+    /* 替换为需要的字体 */
+    font-size: 18px;
+    /* 字体大小 */
+    line-height: 1.8;
+    /* 行间距 */
+    text-align: left;
+    /* 文字左对齐 */
+    padding: 10px;
+    /* 添加内边距 */
+}
+
+/* Function Image */
+.function-image img {
+    max-width: 400px;
+    /* 限制图片最大宽度 */
+    height: auto;
+    /* 自动调整高度 */
+    border-radius: 10px;
+    /* 圆角边框 */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    /* 添加阴影 */
+}
+
+/* Application Scenarios Section */
+.scenarios {
+    text-align: center;
+    margin-top: 80px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    /* 浅灰背景 */
+}
+
+.scenarios h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.scenario-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.scenario {
+    text-align: center;
+    max-width: 250px;
+}
+
+.scenario img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    /* 阴影效果 */
+}
+
+.scenario p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #2A3A4B;
+    /* 深色背景 */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto;
+    /* 自动填充主内容与 Footer 之间的空间 */
+}
+
+footer .footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+footer input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    outline: none;
+}
+
+footer input:focus {
+    border-color: #007BFF;
+    /* 聚焦时边框变蓝 */
+}
+
+footer button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #00AEEF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+    background-color: #007BFF;
+}
+
+/* About Us Title */
+.about-title {
+    font-size: 40px;
+    color: #333;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: bold;
+}
+
+body.about main {
+    text-align: center;
+    padding-top: 100px;
+    /* 调整 About Us 的顶部空白 */
+}
+
+/* About Us Content Container */
+.about-content {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* About Us Section */
+.about-title {
+    font-size: 50px;
+    /* 标题稍大 */
+    font-weight: bold;
+    /* 加粗标题 */
+    color: #333;
+    /* 深灰色 */
+    text-align: left;
+    /* 标题居中 */
+    margin-top: 100px;
+    /* 顶部间距 */
+    margin-bottom: 30px;
+    /* 底部间距 */
+    margin-left: -70%;
+    /* 左侧偏移 20% */
+}
+
+.about-container {
+    max-width: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.about-block {
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-block.reverse {
+    flex-direction: row-reverse;
+    /* 图片和文字左右交换 */
+}
+
+.about-block .text {
+    flex: 1;
+    color: #555;
+}
+
+.about-block .text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-block .text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-block .image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-block .image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternate Layout for Even Sections */
+.about-section:nth-child(even) {
+    flex-direction: row-reverse;
+    /* 反转方向 */
+}
+
+/* 全局重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Container */
+main {
+    margin: 10;
+    padding: 10;
+}
+
+/* About Header Section */
+.about-header {
+    height: auto;
+    margin: 40;
+    padding: 40;
+}
+
+/* About Us Title */
+.about-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-left: -80%;
+    margin-top: 40px;
+    /* 减少顶部空白 */
+    margin-bottom: 20px;
+}
+
+/* Section Spacing */
+main section {
+    margin-left: 10%;
+    /* 左侧间距 */
+    margin-right: 10%;
+    /* 右侧间距 */
+    margin-bottom: 40px;
+    /* 每个部分之间的间距 */
+}
+
+/* Our Story Section Styles */
+.our-story {
+    background: linear-gradient(to right, #f7f7f7, #e9e9e9);
+    padding: 50px 40px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 30px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+/* Title Styling */
+.our-story h2 {
+    font-size: 36px;
+    font-family: 'Georgia', serif;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Text Styling */
+.our-story p {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #555;
+    text-align: left;
+    /* 段落文字居左 */
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+.our-story img {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .our-story {
+        padding: 30px 15px;
+    }
+
+    .our-story h2 {
+        font-size: 28px;
+    }
+
+    .our-story p {
+        font-size: 16px;
+    }
+}
+
+
+/* Mission and Vision Section */
+.mission-vision {
+    display: flex;
+    /* 使用并排布局 */
+    justify-content: space-between;
+    /* 左右分布 */
+    gap: 40px;
+    /* 左右板块间距 */
+    margin-top: 80px;
+    /* 整体上方间距 */
+    margin-bottom: 60px;
+    /* 整体下方间距 */
+    padding: 0 5%;
+    /* 两边留白，保持页面平衡 */
+}
+
+/* 独立板块样式 */
+.mission,
+.vision {
+    flex: 1;
+    /* 每个板块等宽 */
+    text-align: left;
+    /* 左对齐 */
+    margin: 20px;
+    /* 每个板块独立的外边距 */
+}
+
+.mission h2,
+.vision h2 {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    /* 标题稍大 */
+    font-weight: bold;
+    /* 加粗标题 */
+    margin-bottom: 30px;
+    /* 标题与正文之间间距 */
+}
+
+.mission p,
+.vision p {
+    font-size: 16px;
+    /* 正文字体稍小 */
+    line-height: 1.8;
+    /* 行间距 */
+    color: #555;
+    /* 浅灰色正文 */
+}
+
+/* Our Value Section */
+.our-value {
+    display: flex;
+    /* 使用 Flex 布局 */
+    justify-content: space-between;
+    /* 左右分布 */
+    align-items: flex-start;
+    /* 顶部对齐 */
+    gap: 60px;
+    /* 左右内容间距 */
+    margin-top: 80px;
+    /* 上方间距 */
+    margin-bottom: 60px;
+    /* 下方间距 */
+    padding: 0 7%;
+    /* 两边留白，保持页面平衡 */
+}
+
+/* 文本部分 */
+.value-text {
+    flex: 1;
+    /* 占据可用空间 */
+    text-align: left;
+    /* 左对齐 */
+}
+
+.value-text h2 {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    /* 标题稍大 */
+    font-weight: bold;
+    /* 加粗标题 */
+    margin-bottom: 20px;
+    /* 标题与正文之间的间距 */
+}
+
+.value-text ul {
+    list-style: none;
+    /* 去掉默认列表样式 */
+    padding: 0;
+    /* 移除内边距 */
+    margin: 0;
+    /* 移除外边距 */
+}
+
+.value-text li {
+    font-size: 16px;
+    /* 正文字体稍小 */
+    line-height: 1.8;
+    /* 行间距 */
+    color: #555;
+    /* 浅灰色正文 */
+    margin-bottom: 10px;
+    /* 每项之间的间距 */
+}
+
+.value-text li strong {
+    font-size: 18px;
+    /* 字体稍大 */
+    font-weight: bold;
+    /* 加粗 */
+    color: #000;
+    /* 黑色，确保醒目 */
+}
+
+
+/* 图片部分 */
+.value-images {
+    display: flex;
+    /* 使用 Flex 布局 */
+    gap: 20px;
+    /* 图片之间的间距 */
+    justify-content: center;
+    /* 水平居中对齐 */
+    align-items: center;
+    /* 垂直居中对齐 */
+    flex: 1;
+    /* 占据等宽空间 */
+}
+
+.value-images img {
+    max-width: 180px;
+    /* 限制图片最大宽度 */
+    height: 320px;
+    /* 固定高度，保持两张图片一致 */
+    object-fit: cover;
+    /* 确保图片比例不失真 */
+    border-radius: 10px;
+    /* 圆角边框 */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    /* 添加阴影效果 */
+}
+
+/* Our Team Section */
+.our-team {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 0 10%;
+    /* 两边留白 */
+    text-align: center;
+}
+
+.our-team h2 {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    /* 标题稍大 */
+    font-weight: bold;
+    /* 加粗标题 */
+    margin-bottom: 40px;
+    /* 与内容保持间距 */
+    color: #333;
+}
+
+/* Team Grid Layout */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* 自动适应列宽 */
+    gap: 40px;
+    /* 网格间距 */
+    justify-items: center;
+    /* 内容水平居中 */
+    align-items: start;
+    /* 内容顶部对齐 */
+}
+
+/* Team Member Card */
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 120px;
+    /* 固定宽度 */
+    height: 130px;
+    /* 固定高度 */
+    border-radius: 50%;
+    /* 圆形头像 */
+    object-fit: cover;
+    /* 图片内容适应容器，保持比例 */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    /* 阴影效果 */
+}
+
+.team-member h3 {
+    font-size: 20px;
+    /* 名字字体大小 */
+    margin-top: 10px;
+    color: #333;
+    /* 深灰色 */
+    font-weight: bold;
+    /* 加粗名字 */
+}
+
+.team-member p {
+    font-size: 16px;
+    /* 职责字体稍小 */
+    margin-top: 5px;
+    color: #555;
+    /* 浅灰色 */
+}
+
+
+/* Contact Page Title */
+.contact-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 150px;
+    color: #333;
+}
+
+/* Partner Section */
+.partner-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.partner-section h2 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.partner-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.partner-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00AEEF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.partner-section button:hover {
+    background-color: #007BFF;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00AEEF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #007BFF;
+}
+
+/* Flash Messages Container */
+.flash-messages {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Success Message */
+.flash-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Error Message */
+.flash-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00AEEF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #007BFF;
+}
+
+
+/* 通用页面标题样式 */
+.form-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 200px;
+    /* 确保标题与导航栏保持适当距离 */
+    margin-bottom: 30px;
+    /* 与表单保持间距 */
+    color: #333;
+    /* 深灰色，易于阅读 */
+}
+
+/* 表单容器样式 */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    /* 居中显示 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    /* 边框颜色 */
+    border-radius: 10px;
+    /* 圆角边框 */
+    background-color: #f9f9f9;
+    /* 浅灰色背景 */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    /* 添加轻微阴影 */
+    margin-bottom: 150px;
+}
+
+/* 表单标签样式 */
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    /* 深灰色 */
+}
+
+/* 表单输入框样式 */
+.form-container input {
+    width: 100%;
+    /* 填满容器宽度 */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    /* 浅灰边框 */
+    border-radius: 5px;
+    /* 圆角边框 */
+    font-size: 16px;
+    /* 字体大小 */
+    box-sizing: border-box;
+    /* 包括内边距和边框 */
+}
+
+/* 输入框聚焦样式 */
+.form-container input:focus {
+    border-color: #007BFF;
+    /* 聚焦时边框变蓝 */
+    outline: none;
+    /* 去掉默认的聚焦样式 */
+}
+
+/* 提交按钮样式 */
+.form-container button {
+    width: 100%;
+    /* 按钮宽度填满容器 */
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #00AEEF;
+    /* 按钮蓝色背景 */
+    color: #fff;
+    /* 按钮文字白色 */
+    border: none;
+    /* 无边框 */
+    border-radius: 5px;
+    /* 圆角边框 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* 鼠标悬停时背景色变化 */
+}
+
+/* 提交按钮悬停样式 */
+.form-container button:hover {
+    background-color: #007BFF;
+    /* 鼠标悬停时变为深蓝色 */
+}
+
+/* 针对 Login 和 Signup 页面调整 main 的最小高度 */
+body.login main,
+body.signup main {
+    min-height: calc(200vh - 120px - 80px);
+    /* 计算页面高度，减去导航栏和 Footer 的高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 内容垂直居中 */
+    align-items: center;
+    /* 内容水平居中 */
+    padding: 20px;
+    /* 添加适当的内边距 */
+    box-sizing: border-box;
+    /* 包括内边距和边框 */
+}
+
+/* Solution 页面样式 */
+.solution {
+    text-align: center;
+    padding: 20px;
+}
+
+.solution-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 150px;
+}
+
+.solution-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    max-width: 7500px;
+    /* 调整地图容器的最大宽度 */
+    margin: 20px auto;
+    /* 居中对齐 */
+    background-color: #f2f2f2;
+    /* 浅色背景 */
+    border-radius: 10px;
+    /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 阴影效果 */
+    padding: 10px;
+    /* 添加内边距 */
+    text-align: center;
+    /* 内容居中 */
+}
+
+canvas {
+    width: 750px;
+    /* 调整画布的宽度 */
+    height: 500px;
+    /* 调整画布的高度 */
+    background-color: #ffffff;
+    /* 画布背景颜色 */
+    border: 1px solid #ccc;
+    /* 添加边框 */
+    border-radius: 10px;
+    /* 圆角边框 */
+}
+
+.navigation-panel {
+    max-width: 400px;
+    /* 设置较窄的宽度 */
+    margin: 20px auto;
+    /* 居中对齐 */
+    padding: 15px;
+    /* 内部填充减少 */
+    background-color: #f9f9f9;
+    /* 浅色背景 */
+    border-radius: 10px;
+    /* 添加圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 添加阴影 */
+    text-align: center;
+    /* 内容居中 */
+}
+
+.control-group {
+    margin-bottom: 15px;
+    text-align: center;
+    /* 将内容居中 */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 200px;
+    /* 设置较窄的宽度 */
+    padding: 8px;
+    /* 减小内边距 */
+    font-size: 0.9rem;
+    /* 缩小字体大小 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin: 0 auto;
+    /* 居中 */
+}
+
+select:focus {
+    border-color: #00AEEF;
+}
+
+button {
+    padding: 8px 15px;
+    /* 缩小按钮的大小 */
+    font-size: 0.9rem;
+    /* 缩小字体 */
+    background-color: #00AEEF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #007bbf;
+}
+
+
+.flash-messages {
+    margin: 20px auto;
+    /* 自动居中 */
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    max-width: 400px;
+    /* 限制宽度 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 添加阴影 */
+}
+
+.flash.success {
+    background-color: #d4edda;
+    /* 成功的绿色背景 */
+    color: #155724;
+    /* 成功的深绿色字体 */
+    border: 1px solid #c3e6cb;
+    /* 成功的边框 */
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    /* 错误的红色背景 */
+    color: #721c24;
+    /* 错误的深红色字体 */
+    border: 1px solid #f5c6cb;
+    /* 错误的边框 */
+}
+
+.flash-messages {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeOut 3s forwards;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.flash.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
