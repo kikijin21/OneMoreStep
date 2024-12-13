@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main class="home">
+    <!-- Slogan -->
+        <h1>
+            Where the map ends,<br>
+            we begin.
+        </h1>
+
+    <!-- Value Proposition and Function Image -->
+        <div class="content-container">
+        <!-- Value Proposition -->
+            <div class="value-proposition">
+                <p>
+                    OneMoreStep provides indoor navigation solutions based on NFC technology, voice buttons, and a
+                    software application, empowers corporate users to serve the visually impaired, accurately solve
+                    the "last step" of indoor navigation challenges, enhance the safety and independence of the
+                    visually impaired, and help corporations fulfill their social responsibilities.
+                </p>
+            </div>
+        <!-- Function Image -->
+            <div class="function-image">
+                <img src="/static/images/function.png" alt="Function Image">
+            </div>
+        </div>
+
+    <!-- Application Scenarios -->
+        <section class="scenarios">
+            <h2>Application Scenarios</h2>
+            <div class="scenario-container">
+                <div class="scenario">
+                    <img src="/static/images/hospital.png" alt="Hospital">
+                    <p>Hospital</p>
+                </div>
+                <div class="scenario">
+                    <img src="/static/images/school.png" alt="School">
+                    <p>School</p>
+                </div>
+                <div class="scenario">
+                    <img src="/static/images/mall.jpg" alt="Mall">
+                    <p>Mall</p>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

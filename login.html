@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main>
+        <h1 class="form-title">Log In</h1>
+        <form action="/login" method="POST" class="form-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+
+    <!-- 闪现消息 -->
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </main>
+
+<!-- 自动跳转到 Home 页面 -->
+    {% if redirect_home %}
+        <script>
+            setTimeout(function() {
+                window.location.href = "{{ url_for('home') }}";
+            }, 3000); // 3秒后跳转到 Home 页面
+        </script>
+    {% endif %}
+{% endblock %}
