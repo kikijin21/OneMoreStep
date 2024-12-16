@@ -3,13 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # 如果没有环境变量 PORT，默认使用 5000 端口
-    app.run(host='0.0.0.0', port=port)
-
-
 # 初始化 Flask 应用
 app = Flask(__name__)
+
 
 # 配置密钥（用于消息闪现）
 app.secret_key = 'your_secret_key'
@@ -20,15 +16,11 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # 数据库模型：Subscriber
-
-
 class Subscriber(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), unique=True, nullable=False)
 
 # 数据库模型：User
-
-
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
@@ -36,21 +28,15 @@ class User(db.Model):
     password = db.Column(db.String(200), nullable=False)
 
 # 初始化数据库（仅需运行一次）
-
-
 def create_tables():
     db.create_all()
 
 # 路由：主页
-
-
 @app.route('/')
 def home():
     return render_template('index.html')
 
-# 路由：About Us 页面
-
-
+# 路由：About Us 页
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -161,4 +147,5 @@ def solution():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # 初始化数据库表
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
